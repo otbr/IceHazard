@@ -1,0 +1,21 @@
+COMANDOS
+
+!rank hp
+!rank mana
+!promotion
+!glist ou !glist NOME DA GUILD.
+!createguild NOME DA SUA GUILD
+/reportbug
+!offer
+!bank
+!buypremium
+!promotion  -- somento após !buypremium
+
+---------------------------------------
+
+RED : 10 Frags RedSkull
+BLACK : 15 Frags BlackSkull
+
+Nova moeda 1kk: Gold Ingot
+
+Sempre sendo atualizado para melhor experiência!

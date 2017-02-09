@@ -26,7 +26,6 @@
         <action uniqueid="2640" event="script" value="soft.lua"/>
         <action uniqueid="2390" event="script" value="magic.lua"/>
         <action uniqueid="3000" event="script" value="level required.lua"/>
-        <action itemid="6527" event="script" value="addon.lua"/>
         <action itemid="7443" script="exp.lua" />
         <action itemid="8983" script="livro.lua" />
         <action uniqueid="1452" event="script" value="lifemana.lua"/>

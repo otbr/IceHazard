@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <creaturescripts>
-	<!--event type="login" name="pisca" script="vipan.lua"/-->
 	<event type="login" name="DoubleXP" event="script" value="exp.lua"/>
 	<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
 	<event type="joinchannel" name="GuildMotd" event="script" value="guildmotd.lua"/>
@@ -13,7 +12,6 @@
 	<event type="login" name="FirstItems" event="script" value="firstitems.lua"/>
 	<event type="PrepareDeath" name="pvparena" script="pvparena.lua"/>
 	<event type="attack" name="attackguild" script="attackguild.lua"/>
-	<event type="death" name="incendio" script="incendioMonster.lua"/>
 	<event type="login" name="fraglook_register" event="script" value="fraglook.lua"/>
 	<event type="look" name="fraglook" event="script" value="fraglook.lua"/>
 	

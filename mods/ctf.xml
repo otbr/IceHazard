@@ -458,7 +458,7 @@ function eventEnds()
 
 				giveReward(cid)
 				local goblet = doPlayerAddItem(cid, 2141, true)
-				doItemSetAttribute(goblet, "description", "Awarded to " .. getPlayerName(cid) .. " for winning the CTF event.")
+				doItemSetAttribute(goblet, "description", "Capture the Flag: Awarded to " .. getPlayerName(cid) .. " for winning the CTF event.")
 
 
 			elseif isTeamOne(cid) then

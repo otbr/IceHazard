@@ -16657,8 +16657,7 @@
 		<attribute key="armor" value="3" />
 		<attribute key="slotType" value="head" />
 	</item>
-	<item id="10309" article="a" name="skill scroll">
-		<attribute key="description" value="with that item you can buy some skills just say !buyskill Name of skill." />
+	<item id="10309" article="a" name="Battlefield Trophy">
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="10316" article="a" name="mighty helm of green sparks">

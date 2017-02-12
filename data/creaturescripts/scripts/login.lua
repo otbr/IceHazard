@@ -46,7 +46,6 @@ function onLogin(cid)
 	registerCreatureEvent(cid, "RushOutfit")
 
 registerCreatureEvent(cid, "killer")
-registerCreatureEvent(cid, "ZombieAttack")
 registerCreatureEvent(cid, "saiu")
 registerCreatureEvent(cid, "entrou")
 registerCreatureEvent(cid, "Idle")

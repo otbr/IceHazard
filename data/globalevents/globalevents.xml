@@ -7,9 +7,6 @@
     <globalevent name="lottery" interval="7200000" event="script" value="lottery.lua"/> 
 	<globalevent name="animated" interval="1000" script="animated.lua"/>
 	<globalevent name="serverstart" type="start" event="script" value="start.lua"/>
-	<!-- Zombie Event -->
-	<globalevent name="ZombieGlobalThink" interval="5000" event="script" value="zombie/onthink.lua"/>
-	<globalevent name="ZombieGlobalStartup" type="start" event="script" value="zombie/onstartup.lua"/>
 	
 	<!-- Team Battle -->
 	<globalevent name="GlobalBattle" interval="60000" event="script" value="BattleGlobalEvents.lua"/>

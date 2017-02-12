@@ -14,9 +14,4 @@
 	<event type="attack" name="attackguild" script="attackguild.lua"/>
 	<event type="login" name="fraglook_register" event="script" value="fraglook.lua"/>
 	<event type="look" name="fraglook" event="script" value="fraglook.lua"/>
-	
-	<!-- Team Battle -->
-	<event type="login" name="BattleLogin" event="script" value="BattleCreatureScript.lua"/>
-	<event type="PrepareDeath" name="BattleDeath" event="script" value="BattleCreatureScript.lua"/>
-	<event type="combat" name="BattleTeam" event="script" value="BattleCreatureScript.lua"/>
 </creaturescripts>

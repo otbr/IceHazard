@@ -9,34 +9,34 @@
 
 
 
-Owner = 1900 -- NÃO MEXA(STORAGE)
+Owner = 1900 -- put empty storage
 
 
-FLAG2_INn = 4000 -- NÃO MEXA(STORAGE)
+FLAG2_INn = 4000 -- put empty storage
 
 
-FLAG_IN = 4001 -- NÃO MEXA(STORAGE)
+FLAG_IN = 4001 -- put empty storage
 
 
-TEAM1_FLAGS = 3030 -- NÃO MEXA(STORAGE)
+TEAM1_FLAGS = 3030 -- put empty storage
 
 
-TEAM2_FLAGS = 3031 -- NÃO MEXA(STORAGE)
+TEAM2_FLAGS = 3031 -- put empty storage
 
 
-Event_Start = 3032 -- NÃO MEXA(STORAGE)
+Event_Start = 3032 -- put empty storage
 
 
-Event_timeend = 3033 -- NÃO MEXA(STORAGE)
+Event_timeend = 3033 -- put empty storage
 
 
-Event_Tile_Close = 3039 -- NÃO MEXA(STORAGE)
+Event_Tile_Close = 3039 -- put empty storage
 
 
-joined = 2023 -- NÃO MEXA(STORAGE)
+joined = 2023 --put empty storage
 
 
-Timer = 1010 --NÃO MEXA(STORAGE)
+Timer = 1010 --put empty storage
 
 
 --------------------------------------
@@ -47,28 +47,28 @@ Timer = 1010 --NÃO MEXA(STORAGE)
 
 
 
-BLUE_FLAG = {x=10499,y=9887,z=6} -- lOCAL QUE A BANDEIRA AZUL FICA
+BLUE_FLAG = {x=10499,y=9887,z=6} -- Blue flag Place
 
 
-RED_FLAG = {x=10553,y=9887,z=6} -- LOCAL QUE A BANDEIRA VERMELHA FICA
+RED_FLAG = {x=10553,y=9887,z=6} --red flag Place
 
 
-Tp_Place = {x=10160,y=10054,z=7} -- ONDE O TELEPORT PARA O EVENTO É CRIADO
+Tp_Place = {x=10160,y=10054,z=7} -- Place where the event teleport will be created.
 
 
-Wait_Place = {x=10522,y=9817,z=7} -- POSIÇÃO QUE O TELEPORT LEVA OS PLAYERS(NA SALA DE ESPERA)
+Wait_Place = {x=10522,y=9817,z=7} -- Positions Players will  be sent when the enter event's teleport
 
 
-frompos = {x=10512, y=9807, z=7} -- CANTO SUPERIOR ESQUERDO DA SALA DE ESPERA
+frompos = {x=10512, y=9807, z=7} --start sqm in the waiting room(1 floor)
 
 
-topos = {x=10532,y=9827,z=7} -- CANTO INFERIOR DIREITO DA SALA DE ESPERA
+topos = {x=10532,y=9827,z=7} -- end sqm in the waiting room(1 floor)
 
 
-Red_Position = {x=10549,y=9887,z=6} -- SPAWN DO TIME VERMELHO
+Red_Position = {x=10549,y=9887,z=6} -- Red team temple pos
 
 
-Blue_Position = {x=10503,y=9887,z=6} -- SPAWN DO TIME AZUL
+Blue_Position = {x=10503,y=9887,z=6} -- Blue team temple pos
 
 
 
@@ -81,35 +81,34 @@ Blue_Position = {x=10503,y=9887,z=6} -- SPAWN DO TIME AZUL
 
 
 
-Event_WaitTime = 1 -- TEMPO APOS CRIAÇÃO DO TELEPORT PARA INICIAR O EVENTO
+Event_WaitTime = 1 -- time for the collection of player then event will start (in minutes)
 
 
-Event_MaxTime = 10 -- DURAÇÃO DO EVENTO
+Event_MaxTime = 10 --- in minutes ( this is the max time for an event to bb running )
 
 
-Players_Speed = 20000 -- VELOCIDADE DOS PLAYERS(MAIOR = MAIS RAPIDO)
+Players_Speed = 20000 -- put the level of base speed in event ( like if you want the speed of lvl 300 then wright 300)
 
 
-Flag_Holder_Speed = 20000 -- VELOCIDADE DE QUEM SEGURA A BANDEIRA
+Flag_Holder_Speed = 20000 -- [Old-Styled feature] speed for the player when he hold a flag better not to increase.
 
 
-TEAM2_NAME = "Red" -- NOME DO TIME 2
+TEAM2_NAME = "Red" -- team 2 name
 
 
-TEAM1_NAME = "Blue" -- NOME DO TIME 1
+TEAM1_NAME = "Blue" -- team 1 name
 
 
-FLAG_SCORE = 2 -- PONTOS PARA O TIME VENCER
+FLAG_SCORE = 2 -- score when team gets he wins
 
 
-Teleport_On_Score = false -- SE ALGUEM CONSEGUIR LEVAR A BANDEIRA À SUA BASE, TODOS SÃO TELEPORTADOS PARA SUAS RESPECTIVAS BASES
+Teleport_On_Score = false -- this teleport all players to their team main position when some one score a flag , make false to disable.
 
 
-Players_Least_Number = 2 -- MINIMO DE PLAYERS NO EVENTO
+Players_Least_Number = 2 -- this means if there is less than 2 players joined the event will be cancelled
 
 
-Min_Join_Level = 1 -- LEVEL MINIMO PARA ENTRAR NO EVENTO
-
+Min_Join_Level = 1 -- min lvl for a player to join event
 ]]></config>
 
   <lib name="CTF-lib"><![CDATA[
@@ -458,7 +457,7 @@ function eventEnds()
 
 				giveReward(cid)
 				local goblet = doPlayerAddItem(cid, 2141, true)
-				doItemSetAttribute(goblet, "description", "Capture the Flag: Awarded to " .. getPlayerName(cid) .. " for winning the CTF event.")
+				doItemSetAttribute(goblet, "description", "Awarded to " .. getPlayerName(cid) .. " for winning the CTF event.")
 
 
 			elseif isTeamOne(cid) then
@@ -704,8 +703,7 @@ function eventEnded()
 					doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
 
 					giveReward(cid)
-					
-					local goblet = doPlayerAddItem(cid, 5805, true)
+					local goblet = doPlayerAddItem(cid, 2141, true)
 					doItemSetAttribute(goblet, "description", "Awarded to " .. getPlayerName(cid) .. " for winning the CTF event.")
 
 				elseif isTeamTwo(cid) then
@@ -944,8 +942,7 @@ function eventEnd()
 					doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
 					
 					giveReward(cid)
-					
-					local goblet = doPlayerAddItem(cid, 5805, true)
+					local goblet = doPlayerAddItem(cid, 2141, true)
 					doItemSetAttribute(goblet, "description", "Awarded to " .. getPlayerName(cid) .. " for winning the CTF event.")
 					
 				elseif isTeamOne(cid) then
@@ -986,8 +983,7 @@ function eventEnd()
 					doChangeSpeed(cid, getTheSpeed(getPlayerLevel(cid)) - getCreatureSpeed(cid))
 					
 					giveReward(cid)
-					
-					local goblet = doPlayerAddItem(cid, 5805, true)
+					local goblet = doPlayerAddItem(cid, 2141, true)
 					doItemSetAttribute(goblet, "description", "Awarded to " .. getPlayerName(cid) .. " for winning the CTF event.")
 					
 				elseif isTeamTwo(cid) then
@@ -1177,7 +1173,10 @@ function eventStart()
 end
 
 function onTime()
-	
+function removeCtfTp()
+	local t = getTileItemById(Tp_Place, 1387).uid
+	return t > 0 and doRemoveItem(t) and doSendMagicEffect(Tp_Place, CONST_ME_POFF)
+end
 	if getGlobalStorageValue(Event_Start) < 0 then
 		
 		setGlobalStorageValue(Event_Start,1)
@@ -1205,7 +1204,8 @@ function onTime()
 			
 		end
 		
-		addEvent(eventStart,Event_WaitTime*60*1000)
+		addEvent(eventStart, Event_WaitTime*60*1000)
+        addEvent(removeCtfTp, Event_WaitTime*60*1000)
 		
 	end
 	

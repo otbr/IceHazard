@@ -13,7 +13,6 @@
 	<talkaction log="yes" words="/openserver" access="5" event="script" value="closeopen.lua"/>
 	<talkaction log="yes" words="/promote;/demote" access="5" event="script" value="promote.lua"/>
 	<talkaction log="yes" access="5" words="/mode" event="script" value="mode.lua"/>
-	<talkaction words="illegalWords" event="script" value="blocklinks.lua"/>
 
 	<!-- Community Managers -->
 	<talkaction log="yes" words="/s" access="4" event="script" value="summon.lua"/>
@@ -111,7 +110,6 @@
 	<talkaction words="!events" script="events.lua"/>
 	<talkaction words="!uptime" access="0" event="script" value="uptime.lua"/>
 	<talkaction words="/guild" script="guildcast.lua"/>
-	<talkaction words="!afk" event="script" value="afk.lua"/>
 	<talkaction words="!service" script="service.lua" />
 	<talkaction words="!glist" script="guildlist.lua"/>
 	<talkaction words="!attackguild" script="attackguild.lua"/>

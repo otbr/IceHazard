@@ -1870,6 +1870,10 @@
     <monster name="Bat" x="0" y="-5" z="7" spawntime="10"/>
     <monster name="Bat" x="0" y="3" z="7" spawntime="10"/>
   </spawn>
+  <spawn centerx="10087" centery="9996" centerz="7" radius="2">
+    <monster name="Lord Vampire" x="-1" y="-1" z="7" spawntime="60"/>
+    <monster name="Lord Jetta" x="1" y="-1" z="7" spawntime="60"/>
+  </spawn>
   <spawn centerx="10079" centery="9998" centerz="7" radius="5">
     <monster name="Tentox" x="-5" y="-3" z="7" spawntime="60"/>
     <monster name="Treptin" x="-3" y="-3" z="7" spawntime="60"/>
@@ -1891,7 +1895,6 @@
     <monster name="Black Bull" x="26" y="28" z="7" spawntime="60"/>
     <monster name="Black Bull" x="-5" y="30" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="10094" centery="10000" centerz="7" radius="11"/>
   <spawn centerx="10159" centery="10000" centerz="7" radius="5"/>
   <spawn centerx="10077" centery="10002" centerz="7" radius="5">
     <monster name="Black Boss" x="-4" y="0" z="7" spawntime="10"/>

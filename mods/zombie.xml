@@ -7,7 +7,7 @@ zombie_config = {
 	rewards = {items ={{9971,10},{8306,4},{7440,1}}, trophy = 5805}, 
 	timeToStartEvent = 10, -- segundos para começar o evento
 	CheckTime = 1, -- tempo que o TP fica aberto para os jogadores adrentarem o evento
-	teleport = {{x=10147, y=10042, z=7}, {x=9930, y=10105, z=7}}, -- position do tp onde aparece, position para onde o jogador vai ao entrar no tp
+	teleport = {{x=10149, y=10042, z=7}, {x=9930, y=10105, z=7}}, -- position do tp onde aparece, position para onde o jogador vai ao entrar no tp
 	arena = {{x=9896, y=10074, z=7},{x=9970, y=10142, z=7}}, -- area positions
 	monster_name = "Zombie Event",
 	timeBetweenSpawns = 20,

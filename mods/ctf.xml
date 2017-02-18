@@ -53,7 +53,7 @@ BLUE_FLAG = {x=10499,y=9887,z=6} -- Blue flag Place
 RED_FLAG = {x=10553,y=9887,z=6} --red flag Place
 
 
-Tp_Place = {x=10160,y=10054,z=7} -- Place where the event teleport will be created.
+Tp_Place = {x=10148,y=10042,z=7} -- Place where the event teleport will be created.
 
 
 Wait_Place = {x=10522,y=9817,z=7} -- Positions Players will  be sent when the enter event's teleport

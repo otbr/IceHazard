@@ -7,21 +7,14 @@ zombie_config = {
 	rewards = {items ={{9971,10},{8306,4},{7440,1}}, trophy = 5805}, 
 	timeToStartEvent = 10, -- segundos para começar o evento
 	CheckTime = 1, -- tempo que o TP fica aberto para os jogadores adrentarem o evento
-	teleport = {{x=10149, y=10042, z=7}, {x=9930, y=10105, z=7}}, -- position do tp onde aparece, position para onde o jogador vai ao entrar no tp
+	teleport = {{x=10150, y=10043, z=7}, {x=9930, y=10105, z=7}}, -- position do tp onde aparece, position para onde o jogador vai ao entrar no tp
 	arena = {{x=9896, y=10074, z=7},{x=9970, y=10142, z=7}}, -- area positions
 	monster_name = "Zombie Event",
 	timeBetweenSpawns = 20,
 	min_Level = 8
 }
-zombie_days = {
-	["Monday"] = {"13:00","18:00","20:00","22:00"},
-	["Tuesday"] = {"13:00","18:00","22:50","22:00"},
-	["Wednesday"] = {"21:03","18:00","20:00","22:00"},
-	["Thursday"] = {"13:00","18:00","20:00","22:00"},
-	["Friday"] = {"13:00","18:00","21:45","22:00"},
-	["Saturday"] = {"13:00","18:00","20:00","22:00"},
-	["Sunday"] = {"13:00","18:00","20:00","22:00"}
-}
+zombie_days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
+
 function removeZombieTp()
 	local t = getTileItemById(zombie_config.teleport[1], 1387).uid
 	return t > 0 and doRemoveItem(t) and doSendMagicEffect(zombie_config.teleport[1], CONST_ME_POFF)
@@ -132,21 +125,19 @@ if isPlayer(cid) and isMonster(attacker) and getCreatureName(attacker) == zombie
 	end
 end
 return true]]></event>
-<globalevent name="Zombie_Start" interval="60000" event="script"><![CDATA[
+<globalevent name="Zombie_Start" time="20:00" event="script"><![CDATA[
 domodlib('zombie_config')
-function onThink(interval, lastExecution)
-	if zombie_days[os.date("%A")] then
-		local hrs = tostring(os.date("%X")):sub(1, 5)
-		if isInArray(zombie_days[os.date("%A")], hrs) and getGlobalStorageValue(zombie_config.storages[3]) <= 0 then
-			local tp = doCreateItem(1387, 1, zombie_config.teleport[1])
-			doItemSetAttribute(tp, "aid", 45100)
-			CheckZombieEvent(zombie_config.CheckTime)
-			setGlobalStorageValue(zombie_config.storages[1], 0)
-			setGlobalStorageValue(zombie_config.storages[2], 0)
-			HaveCreatureZombie(zombie_config.arena, true) 
-		end
-	end
-	return true
+function onTime()
+ local x = os.date("%A")
+  if isInArray(zombie_days, x) and getGlobalStorageValue(zombie_config.storages[3]) <= 0 then
+   local tp = doCreateItem(1387, 1, zombie_config.teleport[1])
+   doItemSetAttribute(tp, "aid", 45100)
+   CheckZombieEvent(zombie_config.CheckTime)
+   setGlobalStorageValue(zombie_config.storages[1], 0)
+   setGlobalStorageValue(zombie_config.storages[2], 0)
+   HaveCreatureZombie(zombie_config.arena, true) 
+  end
+ return true
 end]]></globalevent>
 <event type="login" name="Zombie_Login" event="script"><![CDATA[
 domodlib('zombie_config')

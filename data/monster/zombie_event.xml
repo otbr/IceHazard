@@ -32,10 +32,6 @@
 <voice sentence="You wont last long!"/>
 <voice sentence="Mmmmh.. braains!"/>
 </voices>
-<script>
-<event name="ZombieThink"/>
-<event name="ZombieDeath"/>
-</script>
 <loot>
 
 </loot>

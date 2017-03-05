@@ -880,7 +880,7 @@ end
 
 ]]></movevent>
 
-  <globalevent name="ctf" time="20:00" event="script"><![CDATA[
+  <globalevent name="ctf" time="14:00" event="script"><![CDATA[
 
 domodlib('toto')
 

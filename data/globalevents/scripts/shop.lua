@@ -53,8 +53,8 @@ received_item = doPlayerAddItemEx(cid, new_item)
 end
 if received_item == RETURNVALUE_NOERROR then
 doPlayerSendTextMessage(cid, SHOP_MSG_TYPE, 'You received >> '.. add_item_name ..' << from OTS shop.')
-db.executeQuery("DELETE FROM `z_ots_comunication` WHERE `id` = " .. id .. ";")
-db.executeQuery("UPDATE `z_shop_history_item` SET `trans_state`='realized', `trans_real`=" .. os.time() .. " WHERE id = " .. id .. ";")
+db.query("DELETE FROM `z_ots_comunication` WHERE `id` = " .. id .. ";")
+db.query("UPDATE `z_shop_history_item` SET `trans_state`='realized', `trans_real`=" .. os.time() .. " WHERE id = " .. id .. ";")
 else
 doPlayerSendTextMessage(cid, SHOP_MSG_TYPE, '>> '.. add_item_name ..' << Seu item esta esperando por voce. Por favor faça o local para este item em sua mochila e aguarde '.. SQL_interval ..' segundos para obte-lo.')
 end
